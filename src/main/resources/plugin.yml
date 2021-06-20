@@ -7,7 +7,14 @@ description: A core plugin that will be used on my personalized servers.
 commands:
   heal:
     description: Fully heal yourself.
-    permission: core.heal
+  gamemode:
+    description: Change your gamemode.
+    aliases:
+      - gm
 permissions:
-  core.heal.others:
-
+  core.admin:
+    default: op
+  core.owner:
+    default: op
+  core.moderator:
+    default: op
