@@ -11,6 +11,8 @@ commands:
     description: Change your gamemode.
     aliases:
       - gm
+  setspawn:
+  spawn:
 permissions:
   core.admin:
     default: op
@@ -18,3 +20,5 @@ permissions:
     default: op
   core.moderator:
     default: op
+  core.member:
+    default: true

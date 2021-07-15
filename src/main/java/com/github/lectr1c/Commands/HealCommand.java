@@ -1,10 +1,7 @@
 package com.github.lectr1c.Commands;
 
-import com.github.lectr1c.Main;
 import com.github.lectr1c.utilities.Feedback;
-import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Bukkit;
-import org.bukkit.Sound;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -12,12 +9,12 @@ import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
-import java.io.Console;
-
 public class HealCommand implements CommandExecutor {
 
+
+
     @Override
-    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, String[] args) {
 
 
         if (sender instanceof Player){
@@ -55,7 +52,7 @@ public class HealCommand implements CommandExecutor {
                 Feedback.noPermError(player, "heal");
             }
         } else if (sender instanceof ConsoleCommandSender) {
-            if (args.length > 1){
+            if (args.length > 0){
                 try{
                     Player otherPlayer = Bukkit.getPlayerExact(args[0]);
                     assert otherPlayer != null;
